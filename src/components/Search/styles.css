@@ -1,0 +1,19 @@
+#Search {
+  display: flex;
+  justify-content: center;
+}
+
+#Search input {
+  width: 90%;
+  height: 4rem;
+
+  background-image: url(../../assets/MagnifyingGlass.svg);
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+  background-position-x: 38rem;
+  background-position-y: 1rem;
+
+  border: 0.2rem solid rgb(201, 197, 197);
+  border-radius: 1.6rem;
+  text-align: center;
+}
