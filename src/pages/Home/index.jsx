@@ -9,6 +9,8 @@ import DittoImage from '../../assets/Ditto.svg';
 import MewImage from '../../assets/Mew.svg';
 import AronImage from '../../assets/Aron.svg';
 import Search from '../../components/Search';
+import './styles.css';
+import CardList from '../../components/CardList';
 
 const pokemons = [
   {
@@ -69,9 +71,10 @@ const pokemons = [
 
 export default function Home() {
   return (
-    <>
+    <div id="home">
       <Header />
       <Search />
-    </>
+      <CardList pokemons={pokemons} />
+    </div>
   );
 }
