@@ -21,7 +21,7 @@ const pokemons = [
   },
   {
     name: 'Charmander',
-    number: 2,
+    number: 4,
     color: '#F57D31',
     image: CharmanderImage,
   },
