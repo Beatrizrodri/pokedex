@@ -1,0 +1,31 @@
+#container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card {
+  width: 56rem;
+  height: 84rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.39);
+  border-radius: 1.6rem;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.8rem;
+  position: relative;
+
+  border-radius: 1.6rem;
+  background-color: #74cb48;
+  background-image: url(../../assets/PokeballBackground.svg);
+  background-repeat: no-repeat;
+  background-size: 25rem;
+  background-position: 26rem 1rem;
+}
