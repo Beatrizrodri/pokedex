@@ -1,0 +1,35 @@
+#card-header-container {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+#card-header-back-button {
+  width: 100%;
+  max-width: 4rem;
+  height: 100%;
+  background: url(../../assets/LefthArrow.svg) no-repeat;
+  background-position: 2rem 1.7rem;
+  cursor: pointer;
+}
+
+#card-header-container div {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+#card-header-pokemon-name {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#card-header-pokemon-number {
+  font-size: 2rem;
+}
