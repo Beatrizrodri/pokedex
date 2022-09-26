@@ -6,6 +6,13 @@ import { getPokemonTypePrimaryColor } from '../../utils/pokemonColor';
 export default function CardDetailsBody({ pokemon, primaryColor }) {
   const { types } = pokemon;
 
+  function addComma(number) {
+    const value = String(number);
+    const lastNumber = value.substring(value.length - 1, value.length);
+
+    return `${value.substring(0, value.length - 1)},${lastNumber}`;
+  }
+
   function PokemonType({ typeName }) {
     const primaryColor = getPokemonTypePrimaryColor(typeName);
 
@@ -37,7 +44,7 @@ export default function CardDetailsBody({ pokemon, primaryColor }) {
         <div className="pokemon-features">
           <div>
             <img src={BalanceImg} alt="balance" />
-            <span>{pokemon.weight} kg</span>
+            <span>{addComma(pokemon?.weight)} kg</span>
           </div>
           <span>Weight</span>
         </div>
@@ -46,7 +53,7 @@ export default function CardDetailsBody({ pokemon, primaryColor }) {
         <div className="pokemon-features">
           <div>
             <img src={ScaleImg} alt="scale" />
-            <span>{pokemon.height} m</span>
+            <span>{addComma(pokemon?.height)} m</span>
           </div>
           <span>Height</span>
         </div>
