@@ -19,9 +19,6 @@ export default function Details() {
       });
   }
 
-  const imageUrl =
-    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg';
-
   useEffect(() => {
     getPokemon();
   }, []);

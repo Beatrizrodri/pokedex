@@ -1,22 +1,38 @@
 import './styles.css';
 import BalanceImg from '../../assets/Balance.svg';
 import ScaleImg from '../../assets/Scale.svg';
+import { getPokemonTypePrimaryColor } from '../../utils/pokemonColor';
 
-export default function CardDetailsBody(pokemonData) {
-  const { pokemon } = pokemonData;
+export default function CardDetailsBody({ pokemon, primaryColor }) {
   const { types } = pokemon;
+
+  function PokemonType({ typeName }) {
+    const primaryColor = getPokemonTypePrimaryColor(typeName);
+
+    return (
+      <div
+        className="pokemon-type"
+        style={{
+          backgroundColor: primaryColor,
+          border: `0.4rem solid ${primaryColor}`,
+        }}
+      >
+        {typeName}
+      </div>
+    );
+  }
 
   return (
     <div id="card-body-container">
       <div id="card-body-pokemon-types">
         {types &&
-          types.map(type => (
-            <div key={type.type.name} className="pokemon-type">
-              {type.type.name}
-            </div>
+          types.map((type, index) => (
+            <PokemonType key={index} typeName={type?.type?.name} />
           ))}
       </div>
-      <div id="card-body-about">About</div>
+      <div id="card-body-about" style={{ color: primaryColor }}>
+        About
+      </div>
       <div id="card-body-pokemon-features">
         <div className="pokemon-features">
           <div>
